@@ -1,0 +1,33 @@
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">EzPath</string>
+    <string name="myde">
+        <font color="#CBCBCB">
+            MAKE YOUR DAY EASIER
+        </font>
+    </string>
+    <string name="todays_errands">
+        <font color="#FFFFFF">
+            TODAY\'S ERRANDS
+        </font>
+    </string>
+    <string name="we_will_generate">
+        <font color="#9FB8BF">
+            We will generate the most efficient path for your errands
+        </font>
+    </string>
+    <string name="Add_errand">
+        <font color="#013C4D">
+            <b>Add errand</b>
+        </font>
+    </string>
+    <string name="Map">
+        <font color="#FFFFFF">
+            <b>MAP</b>
+        </font>
+    </string>
+    <string name="Notes">
+        <font color="#FFFFFF">
+            <b>Notes</b>
+        </font>
+    </string>
+</resources>

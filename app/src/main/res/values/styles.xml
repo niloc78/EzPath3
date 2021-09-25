@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="fabshape" parent="">
+        <item name="android:shape">ring</item>
+        <item name="android:innerRadius">0dp</item>
+        <item name="cornerSize">50%</item>
+        <item name="cardCornerRadius">31dp</item>
+    </style>
+
+
+    <style name="bodyTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/rosarioreg</item>
+        <item name="fontFamily">@font/rosarioreg</item>
+    </style>
+    <style name="notesFabStyle" parent="Widget.Design.FloatingActionButton">
+        <item name="backgroundTint">#F8F8F8</item>
+        <item name="tint">@color/background_teal</item>
+    </style>
+
+    <style name="gearFabStyle" parent="Widget.Design.FloatingActionButton">
+        <item name="backgroundTint">#F8F8F8</item>
+        <item name="tint">@color/black</item>
+    </style>
+
+    <style name="noteSheetStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/sheetOverlay</item>
+    </style>
+
+    <style name="customRatingBarSize" parent="Widget.AppCompat.RatingBar.Small">
+    </style>
+
+    <style name="splashTheme" parent="Theme.EzPath3">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="sheetOverlay" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">42dp</item>
+        <item name="cornerSizeTopLeft">42dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+</resources>

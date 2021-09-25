@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/header_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/header_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/background_header_gradient"/>
+
+    <View
+        android:id="@+id/header_guideline"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.27"/>
+
+    <TextView
+        android:id="@+id/todays_errands"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/bebasneuereg"
+        android:text="@string/todays_errands"
+        android:textSize="32sp"
+        app:layout_constraintTop_toTopOf="@id/header_background"
+        app:layout_constraintStart_toStartOf="@id/header_background"
+        app:layout_constraintEnd_toEndOf="@id/header_background" />
+    <TextView
+        android:id="@+id/we_will_generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:textSize="22sp"
+        android:fontFamily="@font/rosariolight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/we_will_generate"
+        app:layout_constraintTop_toBottomOf="@id/todays_errands"
+        app:layout_constraintBottom_toTopOf="@id/constrain_top_guideline"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeMaxTextSize="22sp"
+        android:maxLines="2"
+        app:layout_constraintVertical_bias="0.4"
+        android:autoSizeMinTextSize="16sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/location_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/we_will_generate"
+        app:layout_constraintEnd_toEndOf="@id/we_will_generate"
+        app:layout_constraintTop_toBottomOf="@id/constrain_top_guideline"
+        app:layout_constraintBottom_toTopOf="@id/constrain_bot_guideline"
+        app:cardCornerRadius="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/pointer_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pointer_icon"
+                android:background="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="10dp"/>
+
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/bodyTextStyle"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/pointer_icon"
+                app:layout_constraintTop_toTopOf="@id/pointer_icon"
+                app:layout_constraintBottom_toBottomOf="@id/pointer_icon"
+                android:includeFontPadding="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="10dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <View
+        android:id="@+id/constrain_top_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toTopOf="@id/header_background"
+        app:layout_constraintBottom_toBottomOf="@id/header_background"
+        app:layout_constraintVertical_bias="0.6"/>
+    <View
+        android:id="@+id/constrain_bot_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toTopOf="@id/header_background"
+        app:layout_constraintBottom_toBottomOf="@id/header_background"
+        app:layout_constraintVertical_bias="0.84"/>
+
+    <ImageView
+        android:id="@+id/side_bar_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_menu_icon"
+        android:background="@null"
+        app:tint="@color/side_bar_icon_tint_selector"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toTopOf="@id/todays_errands"
+        app:layout_constraintBottom_toBottomOf="@id/todays_errands"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/errand_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/location_card"
+        app:layout_constraintEnd_toEndOf="@id/location_card"
+        app:layout_constraintTop_toBottomOf="@id/header_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:paddingTop="20dp"
+    android:paddingLeft="20dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/load_this_errand_Set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Load this errand set?"
+        style="@style/bodyTextStyle" />
+
+    <TextView
+        android:id="@+id/set_list_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/load_this_errand_Set"
+        android:layout_alignLeft="@id/load_this_errand_Set"
+        android:layout_marginTop="15dp"
+        style="@style/bodyTextStyle"
+        android:textSize="15sp"
+        android:textColor="#9F9F9F"
+        android:paddingRight="15dp"
+        android:text="ansjkdnsaf,njasfdnsajfknsdkf,dsjfkdsnfkjds,dsfjndsfkdsnf,ndsjfnsd"/>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".ui.activity.MainActivity"
+    android:id="@+id/login_activity_root">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/myde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:fontFamily="@font/bebasneuereg"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="@id/logo"
+        app:layout_constraintEnd_toEndOf="@id/logo"
+        app:layout_constraintBottom_toBottomOf="@id/logo"
+        app:layout_constraintVertical_bias="0"
+        android:text="@string/myde"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:checkable="true"
+        app:checkedIconTint="@null"
+        app:checkedIcon="@null"
+        app:cardBackgroundColor="@color/white"
+        android:foregroundTint="@color/black"
+        app:rippleColor="@color/background_end_teal"
+        android:backgroundTint="@color/white"
+        android:id="@+id/search_location_button"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        app:cardCornerRadius="31dp"
+        app:shapeAppearanceOverlay="@style/fabshape"
+        app:layout_constraintTop_toBottomOf="@id/myde"
+        app:layout_constraintStart_toStartOf="@id/myde"
+        app:layout_constraintEnd_toEndOf="@id/myde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:cardElevation="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_search_location_icon"
+                app:layout_constraintHorizontal_weight="1"/>
+
+            <fragment
+                android:id="@+id/place_search_autocomplete"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/search_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="4"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--    <Button-->
+    <!--        android:id="@+id/test_skip"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="test skip"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

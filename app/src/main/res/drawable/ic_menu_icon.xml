@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+  <group android:name="dot_rotate_group"
+      android:pivotX="3"
+      android:pivotY="10"
+      android:rotation="0"
+      android:translateY="0"
+      android:translateX="7">
+
+    <path
+        android:pathData="M3,10m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:fillColor="#9fb8bf"/>
+    <path
+        android:pathData="M3,17m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:fillColor="#9fb8bf"/>
+    <path
+        android:pathData="M3,3m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:fillColor="#9fb8bf"/>
+
+  </group>
+
+
+</vector>

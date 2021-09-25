@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundgrey">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/toggle_frag_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabCustomSize="@dimen/design_fab_size_custom"
+                android:src="@drawable/ic_map_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="5dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/drawer_container"
+        android:layout_width="320dp"
+        android:layout_gravity="start"
+        android:layout_height="match_parent"
+        android:background="#3C4548">
+
+        <ImageView
+            android:id="@+id/drawer_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/drawer_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/drawer_divider"
+            app:layout_constraintTop_toBottomOf="@id/drawer_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/drawer_logo"
+            app:layout_constraintEnd_toEndOf="@id/drawer_logo"
+            app:layout_constraintHorizontal_bias="0.4"/>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/moving_shape_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/filter_button"
+            app:layout_constraintBottom_toBottomOf="@id/filter_button"
+            app:cardBackgroundColor="#7D8F94"
+            app:layout_constraintStart_toStartOf="@id/filter_button"
+            app:layout_constraintEnd_toEndOf="@id/filter_button"
+            app:cardElevation="0dp"/>
+
+
+
+        <ImageButton
+            android:id="@+id/filter_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/divider"
+            app:layout_constraintTop_toTopOf="@id/divider"
+            android:src="@drawable/ic_filter_icon"
+            android:background="@drawable/icon_background_selector"
+            app:tint="@color/icon_tint_selector"
+            android:layout_marginBottom="10dp" />
+
+        <ImageButton
+            android:id="@+id/folder_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/divider"
+            app:layout_constraintTop_toBottomOf="@id/filter_button"
+            android:src="@drawable/ic_folder_icon"
+            android:background="@drawable/icon_background_selector"
+            app:tint="@color/icon_tint_selector"
+            android:layout_marginTop="10dp" />
+
+        <ImageButton
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/moving_shape_background"
+            app:layout_constraintEnd_toEndOf="@id/moving_shape_background"
+            app:layout_constraintBottom_toBottomOf="@id/divider"
+            android:background="@android:color/transparent"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_save_icon"/>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/preferences_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/filter_button"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/preferences_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                style="@style/bodyTextStyle"
+                android:text="Preferences"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"/>
+
+            <View
+                android:id="@+id/preferences_guide_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toBottomOf="@id/preferences_header"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <TextView
+                android:id="@+id/rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#D1D1D1"
+                android:includeFontPadding="false"
+                style="@style/bodyTextStyle"
+                android:text="Rating"
+                app:layout_constraintTop_toBottomOf="@id/preferences_guide_line"
+                app:layout_constraintStart_toStartOf="@id/preferences_header"
+                app:layout_constraintBottom_toTopOf="@id/price_level_text" />
+
+            <TextView
+                android:id="@+id/price_level_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#D1D1D1"
+                android:includeFontPadding="false"
+                style="@style/bodyTextStyle"
+                android:text="Pricing"
+                app:layout_constraintTop_toBottomOf="@id/rating_text"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@id/rating_text"/>
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="1"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:progressTint="@color/white"
+                android:secondaryProgressTint="@android:color/transparent"
+                android:progressBackgroundTint="#879BA1"
+                app:layout_constraintTop_toTopOf="@id/rating_text"
+                app:layout_constraintBottom_toBottomOf="@id/rating_text"
+                app:layout_constraintStart_toEndOf="@id/rating_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:max="5"
+                android:isIndicator="false"
+                style="@style/customRatingBarSize"/>
+
+            <ImageButton
+                android:id="@+id/price_level_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_price_level_1"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@id/price_level_text"
+                app:layout_constraintTop_toTopOf="@id/price_level_text"
+                app:layout_constraintBottom_toBottomOf="@id/price_level_text"
+                app:layout_constraintEnd_toStartOf="@id/price_level_2"
+                app:tint="@color/price_tint_selector"/>
+
+            <ImageButton
+                android:id="@+id/price_level_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_price_level_2"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@id/price_level_1"
+                app:layout_constraintTop_toTopOf="@id/price_level_text"
+                app:layout_constraintBottom_toBottomOf="@id/price_level_text"
+                app:layout_constraintEnd_toStartOf="@id/price_level_3"
+                app:tint="@color/price_tint_selector"/>
+
+            <ImageButton
+                android:id="@+id/price_level_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_price_level_3"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@id/price_level_2"
+                app:layout_constraintTop_toTopOf="@id/price_level_text"
+                app:layout_constraintBottom_toBottomOf="@id/price_level_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="@color/price_tint_selector" />
+
+            <TextView
+                android:id="@+id/radius_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#D1D1D1"
+                android:includeFontPadding="false"
+                style="@style/bodyTextStyle"
+                android:text="Radius (m)"
+                app:layout_constraintTop_toBottomOf="@id/price_level_text"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@id/price_level_text"/>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/radius_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radius_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.025"
+                android:valueFrom="300"
+                android:valueTo="15000"
+                android:value="10000"
+                app:tickColor="@android:color/transparent"
+                app:thumbColor="@color/white"
+                app:thumbStrokeColor="@color/white"
+                android:stepSize="100"
+                app:trackColorActive="@color/white"
+                app:trackColorInactive="#879BA1" />
+
+
+            <TextView
+                android:id="@+id/prioritize_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#D1D1D1"
+                android:includeFontPadding="false"
+                style="@style/bodyTextStyle"
+                android:text="Prioritize By"
+                app:layout_constraintTop_toBottomOf="@id/radius_slider"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="@id/radius_text"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/priority_chip_group"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                app:singleLine="true"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:chipSpacingHorizontal="10dp"
+                app:layout_constraintStart_toStartOf="@id/prioritize_text"
+                app:layout_constraintTop_toBottomOf="@id/prioritize_text">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="Distance"
+                    app:chipBackgroundColor="@color/price_tint_selector"
+                    android:textColor="@color/chip_text_color_selector"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="Rating"
+                    app:chipBackgroundColor="@color/price_tint_selector"
+                    android:textColor="@color/chip_text_color_selector" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="invisible"
+            android:id="@+id/saved_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/filter_button"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <View
+                android:id="@+id/saved_guide_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toBottomOf="@id/saved_header"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.05"/>
+
+            <TextView
+                android:id="@+id/saved_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                style="@style/bodyTextStyle"
+                android:text="Load errands"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/saved_errands_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/saved_guide_line"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
