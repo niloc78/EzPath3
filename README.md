@@ -29,34 +29,34 @@
 
 1. Enter your current location in the landing page.
 
-![Alt Text](https://im7.ezgif.com/tmp/ezgif-7-85678d7102ca.gif)
+![Alt Text](https://media.giphy.com/media/MzaMnukrdggEVmEEtY/giphy.gif)
 
 2. (OPTIONAL) Open the side menu to access filters.
 
-![Alt Text](https://im7.ezgif.com/tmp/ezgif-7-3ec76c34e348.gif)
+![Alt Text](https://media.giphy.com/media/tEHb7CnUJM8L02jDSu/giphy.gif)
 
 3. Add errands (i.e. buy pencils) by pressing on the Add errand button. Every update that the user makes to this list of errands will affect the generated path.
 
-![Alt Text](https://im7.ezgif.com/tmp/ezgif-7-794602f86aec.gif)
+![Alt Text](https://media.giphy.com/media/SwugWiQTtiMG4IL5Vp/giphy.gif)
 
 4. Press the map button located on the lower right to switch to MAP view, revealing the generated path.
 
-![Alt Text](https://im7.ezgif.com/tmp/ezgif-7-782619ee48fa.gif)
+![Alt Text](https://media.giphy.com/media/U5MmVceJIMQRXQlDlM/giphy.gif)
 
 5. Press the white notes button located on the upper lower right to reveal notes. The user may press the button again or drag it down to the bottom of the screen to hide notes.
 
-![Alt Text](https://im7.ezgif.com/tmp/ezgif-7-ae3e3d09b51a.gif)
+![Alt Text](https://media.giphy.com/media/LhITucbaQwMZhNQNQC/giphy.gif)
 
 6. Pressing the blue task button located on the bottom lower right will switch back to TODAY'S ERRANDS view.
 
-![Alt Text](https://im7.ezgif.com/tmp/ezgif-7-97bdaa5a462c.gif)
+![Alt Text](https://media.giphy.com/media/b3W1I5N10y2Hu63Seb/giphy.gif)
 
 7. (OPTIONAL) Open the side menu to save the errands list, for quick future access, by pressing the floppy disc icon at the bottom of the sidebar.
 
-![Alt Text](https://im7.ezgif.com/tmp/ezgif-7-a989289bb450.gif)
+![Alt Text](https://media.giphy.com/media/Cc4LUyZKGjsbNDJyd6/giphy.gif)
 
 8. (OPTIONAL) To load saved errands, the user will need to press on the folder icon and quickly press on their saved errands. Holding any set of saved errands will reveal a delete option.
 
-![Alt Text](https://im7.ezgif.com/tmp/ezgif-7-459572577399.gif)
+![Alt Text](https://media.giphy.com/media/W0UA0tRqoIReNYZRYN/giphy.gif)
 
 </br>
